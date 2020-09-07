@@ -1,0 +1,17 @@
+
+@mixin cards-layout($default-card-width: 320px, $card-width-on-mobile: 280px) {
+	display: grid;
+	grid-gap: 80px;
+	grid-template-columns: repeat(auto-fill, $default-card-width);
+	justify-content: center;
+
+	// @include app-on-mobile() {
+	// 	@media (orientation: portrait) {
+	// 		grid-template-columns: repeat(auto-fill, $card-width-on-mobile);
+	// 	}
+	// }
+}
+
+.cards-area {
+    @include cards-layout();
+}
