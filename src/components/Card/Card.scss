@@ -1,7 +1,9 @@
 @import '../../styles/utils/colors';
 @import '../../styles/utils/variables';
 @import '../../styles/mixins/sizing';
-@import '../../styles/mixins/corner';
+@import '../../styles/mixins/card';
+
+$card-states: 'selected', 'disabled';
 
 .card {
     position: relative;
@@ -21,10 +23,6 @@
     }
 }
 
-.card_selected {
-    border-color: $pink;
-}
-
 .card__corner {
     @include corner(60px, 8px, 'top');
     transform: rotate(-45deg);
@@ -42,16 +40,19 @@
     }
 }
 
-.card__corner_selected {
-    @include corner_selected('top');
-
-    &::before, &::after {
-        @include corner_selected();
+@each $state in $card-states {
+    .card_#{$state} {
+        @include card-state($state);
     }
-}
 
-.card_disabled {
-}
+    .card__corner_#{$state} {
+        @include corner-state($state, 'top');
+
+        &::before, &::after {
+            @include corner-state($state);
+        }
+    }
+} 
 
 .card_disabled::after{
     content: '';

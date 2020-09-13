@@ -1,0 +1,25 @@
+@mixin card-state($state) {
+    @if $state == 'selected' {
+        border-color: $pink;
+    } @else {
+        border-color: $disabled-color;
+    } 
+}
+
+@mixin corner($size: 100%, $offset: 0, $border: left) {
+    position: absolute;
+    background-color: $white;
+    width: $size;
+    height: $size;
+    top: $offset;
+    left: $offset;
+    border-#{$border}: 4px solid $blue;
+}
+
+@mixin corner-state($state, $border: left) {
+    @if $state == 'selected' {
+        border-#{$border}-color: $pink;
+    } @else {
+        border-#{$border}-color: $disabled-color;
+    } 
+}
