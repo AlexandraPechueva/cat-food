@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cat-food/static/css/main.25d15fa4.chunk.css",
+    "main.css": "/cat-food/static/css/main.2a0983db.chunk.css",
     "main.js": "/cat-food/static/js/main.28738f4d.chunk.js",
     "main.js.map": "/cat-food/static/js/main.28738f4d.chunk.js.map",
     "runtime-main.js": "/cat-food/static/js/runtime-main.c3a21e33.js",
@@ -8,9 +8,9 @@
     "static/js/2.2e9b3b2a.chunk.js": "/cat-food/static/js/2.2e9b3b2a.chunk.js",
     "static/js/2.2e9b3b2a.chunk.js.map": "/cat-food/static/js/2.2e9b3b2a.chunk.js.map",
     "index.html": "/cat-food/index.html",
-    "precache-manifest.aa91c785f98f327eb1a50228211023d4.js": "/cat-food/precache-manifest.aa91c785f98f327eb1a50228211023d4.js",
+    "precache-manifest.2a3784cfad27d0cf3f96868d76336e76.js": "/cat-food/precache-manifest.2a3784cfad27d0cf3f96868d76336e76.js",
     "service-worker.js": "/cat-food/service-worker.js",
-    "static/css/main.25d15fa4.chunk.css.map": "/cat-food/static/css/main.25d15fa4.chunk.css.map",
+    "static/css/main.2a0983db.chunk.css.map": "/cat-food/static/css/main.2a0983db.chunk.css.map",
     "static/js/2.2e9b3b2a.chunk.js.LICENSE.txt": "/cat-food/static/js/2.2e9b3b2a.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/cat-food/static/media/exo2.0-thin.eab2a540.eot",
     "static/media/Card.scss": "/cat-food/static/media/funbox_logo.fd6f77d5.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.c3a21e33.js",
     "static/js/2.2e9b3b2a.chunk.js",
-    "static/css/main.25d15fa4.chunk.css",
+    "static/css/main.2a0983db.chunk.css",
     "static/js/main.28738f4d.chunk.js"
   ]
 }
