@@ -1,3 +1,49 @@
+@import '../../styles/utils/colors';
+
 .card-main {
     min-height: 375px;
+}
+
+.card-main__taste {
+    margin: 0 0 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.card-main__features {
+    color: $light-text;
+    font-size: 14px;
+    line-height: 16px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-main__weight {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 21px;
+    line-height: 22px;
+    color: $white;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.card-main__weight-value {
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.card-main__weight_selected {
+    background-color: $pink;
+}
+
+.card-main__weight_disabled {
+    background-color: $disabled-weight;
 }

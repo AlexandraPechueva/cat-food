@@ -18,10 +18,10 @@ const data = [
             additional: '',
         },
         amount: 3,
-        weight: 0.5,
+        weight: '0,5',
         messages: {
             default: 'Чего сидишь? Порадуй котэ, ',
-            selected: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
+            selected: 'Печень гусиная свежайшая',
             disabled: 'Печалька, с фуа-гра закончился.'
         },
     },
@@ -40,7 +40,7 @@ const data = [
             additional: '',
         },
         amount: 5,
-        weight: 2,
+        weight: '2',
         messages: {
             default: 'Чего сидишь? Порадуй котэ, ',
             selected: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
@@ -61,21 +61,17 @@ const data = [
             present: '5 мышей',
             additional: 'заказчик доволен',
         },
-        weight: 5,
+        weight: '5',
         amount: 0,
         messages: {
             default: 'Чего сидишь? Порадуй котэ, ',
-            selected: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
+            selected: 'Курочка вкуснейшая',
             disabled: 'Печалька, с курой закончился.'
         },
     },
 ];
 
 class FoodCards extends React.Component {
-    constructor() {
-        super();
-    }
-
     render() {
         return (
             <div className="cards-area">

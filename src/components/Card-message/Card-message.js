@@ -2,15 +2,16 @@ import React from 'react';
 import './Card-message.scss';
 
 class CardMessage extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
-        const { amount, isSelected, messages } = this.props;
-        // console.log(text)
+        const { isSelected, isDisabled, messages } = this.props;
+
         return (
-            amount == 0 ? <p className="card-message">{messages.disabled}</p> :
-                isSelected ? <p className="card-message">{messages.selected}</p> : <p className="card-message">{messages.default} купи</p>
+            isDisabled ? <p className="card-message card-message_disabled ">{messages.disabled}</p> :
+                isSelected ? <p className="card-message">{messages.selected}</p> :
+                    <p className="card-message">
+                        {messages.default}
+                        <button className="button-link" onClick={this.props.handleClick}>купи</button>
+                    </p>
 
         );
     }

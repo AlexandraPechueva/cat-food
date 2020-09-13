@@ -1,3 +1,23 @@
+@import '../../styles/utils/colors';
+
 .card-header {
     min-height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-description {
+    font-size: 16px;
+    font-weight: normal;
+    color: $light-text;
+    margin: 0;
 }

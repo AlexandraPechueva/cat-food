@@ -1,21 +1,24 @@
 import React from 'react';
 import './Card-main.scss';
+import { setClassName } from '../../shared/helpers/set-class-name';
 
 class CardMain extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
-        const { info, taste, weight } = this.props;
-        console.log(info, taste)
+        const { info, taste, weight, isSelected, isDisabled } = this.props;
+        const defaultClassName = 'card-main__weight';
+        const weightClassName = setClassName(defaultClassName, isSelected, isDisabled);
+
+
         return (
             <div className="card-main">
-                <p>{info.portions} порций</p>
-                <p>{info.present} в подарок</p>
-                {info.additional ? <p>{info.additional}</p> : ''}
+                <p className="card-main__taste">{taste}</p>
+                <ul className="card-main__features">
+                    <li>{info.portions} порций</li>
+                    <li>{info.present} в подарок</li>
+                    {info.additional ? <li>{info.additional}</li> : ''}
+                </ul>
 
-                <p>{taste}</p>
-                <p>{weight} кг</p>
+                <div className={weightClassName}><span className="card-main__weight-value">{weight}</span>кг</div>
             </div>
         );
     }

@@ -1,0 +1,16 @@
+
+@mixin link-button-layout($color) {
+    border: none;
+    background: transparent;
+    border-bottom: 1px dashed $color;
+	color: $color;
+	padding: 0;
+
+	&:hover {
+		color: darken($color, 15%);
+	}
+
+	&:focus {
+		outline: 0;
+	}
+}

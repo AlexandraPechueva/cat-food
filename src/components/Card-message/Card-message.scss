@@ -1,3 +1,18 @@
+@import '../../styles/mixins/buttons';
+@import '../../styles/utils/colors';
+@import '../../styles/utils/variables';
+
 .card-message {
-    color: white;
+    color: $white;
+    text-align: center;
+    min-height: 32px;
+    max-width: $card-default-width;
+}
+
+.card-message_disabled {
+    color: $disabled-text;
+}
+
+.button-link {
+    @include link-button-layout($blue);
 }

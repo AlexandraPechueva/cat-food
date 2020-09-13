@@ -1,0 +1,27 @@
+$tablet: 1200px;
+$mobile: 576px;
+
+@mixin on-tablet() {
+	@media only screen and (orientation: portrait) and (min-width: $mobile) and (max-width: $tablet),
+		 only screen and (orientation: landscape) and (min-height: $mobile) and (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin on-mobile() {
+	@media only screen and (orientation: portrait) and (max-width: calc(#{$mobile} - 1px)),
+		only screen and (orientation: landscape) and (max-height: calc(#{$mobile} - 1px)) and (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin on-tablet-and-less() {
+	@include on-tablet() {
+		@content;
+	}
+
+	@include on-mobile() {
+		@content;
+    }
+}
+
