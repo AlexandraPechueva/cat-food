@@ -13,7 +13,7 @@ class CardMain extends React.Component {
             <div className="card-main">
                 <p className="card-main__taste">{taste}</p>
                 <ul className="card-main__features">
-                    <li>{info.portions} порций</li>
+                    <li><span className="card-main__portions-amount">{info.portions}</span> порций</li>
                     <li>{info.present} в подарок</li>
                     {info.additional ? <li>{info.additional}</li> : ''}
                 </ul>

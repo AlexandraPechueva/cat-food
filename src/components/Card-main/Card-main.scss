@@ -1,7 +1,7 @@
 @import '../../styles/utils/colors';
 
 .card-main {
-    min-height: 375px;
+    min-height: 365px;
 }
 
 .card-main__taste {
@@ -31,8 +31,12 @@
     line-height: 22px;
     color: $white;
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.card-main__portions-amount {
+    font-weight: bold;
 }
 
 .card-main__weight-value {
