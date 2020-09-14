@@ -3,12 +3,11 @@
 @import '../../styles/mixins/sizing';
 @import '../../styles/mixins/card';
 
-$card-states: 'selected', 'disabled';
+$card-states: 'default', 'selected', 'disabled';
 
 .card {
     position: relative;
     padding: 15px 40px 7px;
-    border: 4px solid $blue;
     background: url('../../images/funbox_logo.png') no-repeat;
     background-size: 380px;
     background-color: $white;
@@ -18,13 +17,15 @@ $card-states: 'selected', 'disabled';
     margin-bottom: 10px;
     width: $card-default-width;
 
+    @include card-common-layout($border: 'border');
+
     @include on-mobile {
         width: $card-mobile-width;
     }
 }
 
 .card__corner {
-    @include corner(60px, 8px, 'top');
+    @include corner(60px, 8px, 'border-top');
     transform: rotate(-45deg);
 
     &::before {
@@ -42,14 +43,14 @@ $card-states: 'selected', 'disabled';
 
 @each $state in $card-states {
     .card_#{$state} {
-        @include card-state($state);
+        @include card-common-layout($border: border, $state:$state)
     }
 
     .card__corner_#{$state} {
-        @include corner-state($state, 'top');
+        @include card-common-layout($border: 'border-top',$state:$state);
 
         &::before, &::after {
-            @include corner-state($state);
+            @include card-common-layout($border: 'border-left', $state:$state);
         }
     }
 } 
