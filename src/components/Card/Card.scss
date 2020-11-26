@@ -6,65 +6,65 @@
 $card-states: 'default', 'selected', 'disabled';
 
 .card {
-    position: relative;
-    padding: 25px 40px 7px;
-    background: url('../../images/funbox_logo.png') no-repeat;
-    background-size: 380px;
-    background-color: $white;
-    background-position: left -40px bottom -98px;
-    border-radius: 15px;
-    border-top-left-radius: 80px;
-    margin-bottom: 10px;
-    width: $card-default-width;
+	position: relative;
+	padding: 25px 40px 7px;
+	background: url('../../images/funbox_logo.png') no-repeat;
+	background-size: 380px;
+	background-color: $white;
+	background-position: left -40px bottom -98px;
+	border-radius: 15px;
+	border-top-left-radius: 80px;
+	margin-bottom: 10px;
+	width: $card-default-width;
 
-    @include card-common-layout($border: 'border');
+	@include card-common-layout($border: 'border');
 
-    @include on-mobile {
-        width: $card-mobile-width;
-    }
+	@include on-mobile {
+		width: $card-mobile-width;
+	}
 }
 
 .card__corner {
-    @include corner(60px, 8px, 'border-top');
-    transform: rotate(-45deg);
+	@include corner(60px, 8px, 'border-top');
+	transform: rotate(-45deg);
 
-    &::before {
-        content: '';
-        @include corner();
-        transform: rotate(45deg) translate(-13px, 28px);
-    }
+	&::before {
+		content: '';
+		@include corner();
+		transform: rotate(45deg) translate(-13px, 28px);
+	}
 
-    &::after {
-        content: '';
-        @include corner();
-        transform: rotate(135deg) translate(-10px, -25px);
-    }
+	&::after {
+		content: '';
+		@include corner();
+	transform: rotate(135deg) translate(-10px, -25px);
+	}
 }
 
 @each $state in $card-states {
-    .card_#{$state} {
-        @include card-common-layout($border: border, $state:$state)
-    }
+	.card_#{$state} {
+	@include card-common-layout($border: border, $state:$state)
+	}
 
-    .card__corner_#{$state} {
-        @include card-common-layout($border: 'border-top',$state:$state);
+	.card__corner_#{$state} {
+	@include card-common-layout($border: 'border-top',$state:$state);
 
-        &::before, &::after {
-            @include card-common-layout($border: 'border-left', $state:$state);
-        }
-    }
+		&::before, &::after {
+			@include card-common-layout($border: 'border-left', $state:$state);
+		}
+	}
 } 
 
 .card_disabled::after{
-    content: '';
-    border-radius: 15px;
-    border-top-left-radius: 80px;
-    position: absolute;
-    background: $disabled-background;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    height: 100%;
-    width: 100%;
+	content: '';
+	border-radius: 15px;
+	border-top-left-radius: 80px;
+	position: absolute;
+	background: $disabled-background;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	 height: 100%;
+	width: 100%;
 }

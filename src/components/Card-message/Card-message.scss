@@ -3,16 +3,16 @@
 @import '../../styles/utils/variables';
 
 .card-message {
-    color: $white;
-    text-align: center;
-    min-height: 32px;
-    max-width: $card-default-width;
+	color: $white;
+	text-align: center;
+	min-height: 32px;
+	max-width: $card-default-width;
 }
 
 .card-message_disabled {
-    color: $disabled-text;
+	color: $disabled-text;
 }
 
 .button-link {
-    @include link-button-layout($blue);
+	@include link-button-layout($blue);
 }
